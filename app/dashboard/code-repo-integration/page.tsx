@@ -1,0 +1,15 @@
+'use client'
+
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+
+export default function LegacyCodeRepoIntegrationRedirect() {
+  const router = useRouter()
+
+  useEffect(() => {
+    router.replace('/dashboard/projects')
+  }, [router])
+
+  return null
+}
+

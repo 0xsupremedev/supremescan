@@ -1,0 +1,41 @@
+id: SS-CRIT-001-reentrancy_no_guard
+name: Reentrancy Without Guard
+severity: CRITICAL
+class: reentrancy
+category: reentrancy-classic
+subcategory: reentrancy-no-guard
+detection:
+  method: static+symbolic
+  patterns:
+    - "external call (call/callcode/delegatecall/send/transfer) occurs before state write"
+    - "function is external or public"
+    - "no reentrancy guard modifier applied"
+  triggers:
+    requires:
+      state_modification: true
+      external_call: true
+remediation:
+  summary: "Update state before external calls or protect with a reentrancy guard."
+  details: |
+    Follow the checks-effects-interactions pattern: validate inputs, update contract
+    state, and only then call external contracts. Alternatively, wrap the function
+    in a nonReentrant modifier using OpenZeppelin's ReentrancyGuard.
+examples:
+  bad: |
+    function withdraw(uint256 amount) external {
+        require(balances[msg.sender] >= amount, "Insufficient");
+        (bool ok, ) = msg.sender.call{value: amount}("");
+        require(ok, "Transfer failed");
+        balances[msg.sender] -= amount; // state updated after external call
+    }
+  good: |
+    function withdraw(uint256 amount) external nonReentrant {
+        require(balances[msg.sender] >= amount, "Insufficient");
+        balances[msg.sender] -= amount;
+        (bool ok, ) = msg.sender.call{value: amount}("");
+        require(ok, "Transfer failed");
+    }
+version: "1.0.0"
+status: active
+
+

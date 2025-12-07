@@ -1,0 +1,26 @@
+id: SS-MED-032-floating_pragma
+name: Floating Solidity Pragma
+severity: MEDIUM
+class: best-practices
+category: language-version
+subcategory: floating-pragma
+detection:
+  method: static
+  patterns:
+    - "pragma solidity ^0.8.0"
+    - "pragma solidity >=0.7.0 <0.9.0"
+remediation:
+  summary: "Pin the Solidity compiler version for reproducible builds."
+  details: |
+    Use an exact compiler version (for example, `pragma solidity 0.8.20;`) to
+    ensure deterministic builds and avoid unintentionally picking up compiler
+    bugs or behavior changes when new versions are released.
+examples:
+  bad: |
+    pragma solidity ^0.8.0;
+  good: |
+    pragma solidity 0.8.20;
+version: "1.0.0"
+status: active
+
+

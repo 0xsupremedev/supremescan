@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface-bg: #0a0f1e;
+  --surface-panel: rgba(11, 17, 34, 0.8);
+  --surface-card: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.12);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --shadow-color: rgba(2, 6, 23, 0.55);
+}
+
+[data-theme='light'] {
+  --surface-bg: #f6f7fb;
+  --surface-panel: rgba(255, 255, 255, 0.95);
+  --surface-card: #ffffff;
+  --border-color: rgba(15, 23, 42, 0.12);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --shadow-color: rgba(15, 23, 42, 0.15);
+}
+
+@layer base {
+  body {
+    background-color: var(--surface-bg);
+    color: var(--text-primary);
+    transition: background-color 200ms ease, color 200ms ease;
+    @apply antialiased;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background-color: var(--surface-panel);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    box-shadow: 0 15px 45px var(--shadow-color);
+    backdrop-filter: blur(24px);
+    transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+  }
+
+  .glass-strong {
+    background-color: var(--surface-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    box-shadow: 0 25px 70px var(--shadow-color);
+    backdrop-filter: blur(30px);
+    transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+  }
+
+  .hexagon-pattern {
+    background-image:
+      linear-gradient(135deg, rgba(98, 54, 255, 0.1) 0%, rgba(58, 141, 255, 0.1) 100%),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 50px,
+        rgba(98, 54, 255, 0.03) 50px,
+        rgba(98, 54, 255, 0.03) 51px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 50px,
+        rgba(58, 141, 255, 0.03) 50px,
+        rgba(58, 141, 255, 0.03) 51px
+      );
+  }
+
+  .particle {
+    @apply absolute rounded-full opacity-20;
+    animation: float 8s ease-in-out infinite;
+  }
+}
+
+[data-theme='light'] .text-white,
+[data-theme='light'] .text-gray-100 {
+  color: var(--text-primary) !important;
+}
+
+[data-theme='light'] .text-gray-200,
+[data-theme='light'] .text-gray-300,
+[data-theme='light'] .text-gray-400,
+[data-theme='light'] .text-gray-500 {
+  color: var(--text-secondary) !important;
+}
+
+[data-theme='light'] .bg-deep-navy {
+  background-color: var(--surface-bg) !important;
+}
+
+[data-theme='light'] .border-white\/10,
+[data-theme='light'] .border-white\/20,
+[data-theme='light'] .border-white\/30 {
+  border-color: var(--border-color) !important;
+}
+
+[data-theme='light'] .bg-white\/5,
+[data-theme='light'] .bg-white\/10,
+[data-theme='light'] .bg-white\/20 {
+  background-color: rgba(15, 23, 42, 0.05) !important;
+}
+

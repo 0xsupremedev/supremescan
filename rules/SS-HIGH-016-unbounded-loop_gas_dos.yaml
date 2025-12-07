@@ -1,0 +1,39 @@
+id: SS-HIGH-016-unbounded-loop_gas_dos
+name: Unbounded Loop Allowing Gas DoS
+severity: HIGH
+class: gas-dos
+category: gas-unbounded-loop
+subcategory: gas-unbounded-loop-onchain
+detection:
+  method: static
+  patterns:
+    - "for/while loop over storage-backed dynamic array"
+    - "loop body performs storage writes or external calls"
+  triggers:
+    requires:
+      public_or_external: true
+      depends_on_user_input: true
+remediation:
+  summary: "Avoid unbounded on-chain loops over user-controlled data."
+  details: |
+    Replace unbounded loops with batched operations (process N items per call),
+    pagination, or entirely off-chain aggregation. Ensure each transaction's gas
+    usage remains below a safe threshold even in worst-case scenarios.
+examples:
+  bad: |
+    function distribute() external {
+        for (uint256 i = 0; i < recipients.length; i++) {
+            token.transfer(recipients[i], amount[i]);
+        }
+    }
+  good: |
+    function distribute(uint256 from, uint256 to) external {
+        uint256 end = to > recipients.length ? recipients.length : to;
+        for (uint256 i = from; i < end; i++) {
+            token.transfer(recipients[i], amount[i]);
+        }
+    }
+version: "1.0.0"
+status: active
+
+

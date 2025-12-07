@@ -1,0 +1,160 @@
+{
+  "version": "0.1.0",
+  "classes": [
+    {
+      "id": "reentrancy",
+      "name": "Reentrancy & Cross-Function Abuse",
+      "description": "External calls that allow re-entering the contract and corrupting state.",
+      "categories": [
+        {
+          "id": "reentrancy-classic",
+          "name": "Classic Reentrancy",
+          "subcategories": [
+            {
+              "id": "reentrancy-no-guard",
+              "name": "No Guard / External Call Before State Update",
+              "exampleRules": [
+                "SS-CRIT-001-reentrancy_no_guard",
+                "SS-CRIT-002-cross_function_reentrancy"
+              ]
+            },
+            {
+              "id": "reentrancy-read-only",
+              "name": "Read-Only Reentrancy",
+              "exampleRules": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "access-control",
+      "name": "Access Control & Authentication Failures",
+      "description": "Missing or broken authorization checks for privileged actions.",
+      "categories": [
+        {
+          "id": "ac-missing-owner",
+          "name": "Missing or Broken Owner Checks",
+          "subcategories": [
+            {
+              "id": "ac-no-only-owner",
+              "name": "Missing onlyOwner / role checks",
+              "exampleRules": [
+                "SS-CRIT-006-access_control_missing_onlyOwner"
+              ]
+            },
+            {
+              "id": "ac-tx-origin",
+              "name": "Authorization via tx.origin",
+              "exampleRules": [
+                "SS-CRIT-004-auth_via_txorigin"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math",
+      "name": "Arithmetic & Math Risks",
+      "description": "Overflow, underflow, precision, and rounding issues in numeric logic.",
+      "categories": [
+        {
+          "id": "math-overflow",
+          "name": "Overflow / Underflow",
+          "subcategories": [
+            {
+              "id": "math-legacy-overflow",
+              "name": "Overflow in pre-0.8 Solidity",
+              "exampleRules": [
+                "SS-CRIT-005-overflow_unchecked"
+              ]
+            },
+            {
+              "id": "math-precision",
+              "name": "Precision & rounding errors",
+              "exampleRules": [
+                "SS-HIGH-023-incorrect-decimals-handling"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "upgradeability",
+      "name": "Upgradeability & Proxy Risks",
+      "description": "Bugs and misconfigurations in proxy and upgrade logic.",
+      "categories": [
+        {
+          "id": "upgrade-init",
+          "name": "Initialization",
+          "subcategories": [
+            {
+              "id": "upgrade-uninitialized",
+              "name": "Uninitialized proxy / implementation",
+              "exampleRules": [
+                "SS-CRIT-007-uninitialized_proxy_implementation"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "upgrade-storage",
+          "name": "Storage Collisions",
+          "subcategories": [
+            {
+              "id": "upgrade-storage-collision",
+              "name": "Proxy storage layout collisions",
+              "exampleRules": [
+                "SS-CRIT-008-storage_collision_in_proxy"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oracle",
+      "name": "Oracles & External Dependency Risks",
+      "description": "Manipulable price feeds, stale data, and dependency on weak external systems.",
+      "categories": [
+        {
+          "id": "oracle-manipulation",
+          "name": "Price Oracle Manipulation",
+          "subcategories": [
+            {
+              "id": "oracle-flashloan",
+              "name": "Flash-loan amplified oracle attacks",
+              "exampleRules": [
+                "SS-CRIT-012-price_oracle_manipulable"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gas-dos",
+      "name": "Gas & Denial of Service",
+      "description": "Patterns that allow griefing or DoS via gas usage.",
+      "categories": [
+        {
+          "id": "gas-unbounded-loop",
+          "name": "Unbounded Loops & Expensive Operations",
+          "subcategories": [
+            {
+              "id": "gas-unbounded-loop-onchain",
+              "name": "Unbounded loops over dynamic state",
+              "exampleRules": [
+                "SS-HIGH-016-unbounded-loop_gas_dos"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+
