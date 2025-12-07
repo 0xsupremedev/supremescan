@@ -78,7 +78,7 @@ export default function ScanProgress({ scanId, onComplete }: ScanProgressProps) 
                     </p>
                 </div>
                 {!isConnected && progress.status === 'running' && (
-                    <AlertCircle className="w-5 h-5 text-yellow-400" title="Connection issue" />
+                    <AlertCircle className="w-5 h-5 text-yellow-400" aria-label="Connection issue" />
                 )}
             </div>
 
@@ -86,10 +86,10 @@ export default function ScanProgress({ scanId, onComplete }: ScanProgressProps) 
             <div className="relative w-full h-2 bg-white/10 rounded-full overflow-hidden">
                 <div
                     className={`absolute inset-y-0 left-0 transition-all duration-300 ${progress.status === 'completed'
-                            ? 'bg-green-500'
-                            : progress.status === 'failed'
-                                ? 'bg-red-500'
-                                : 'bg-gradient-to-r from-purple-600 to-blue-600'
+                        ? 'bg-green-500'
+                        : progress.status === 'failed'
+                            ? 'bg-red-500'
+                            : 'bg-gradient-to-r from-purple-600 to-blue-600'
                         }`}
                     style={{ width: `${progress.progress}%` }}
                 />

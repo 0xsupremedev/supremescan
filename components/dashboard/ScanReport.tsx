@@ -55,7 +55,7 @@ export default function ScanReport({ scanId }: ScanReportProps) {
         setExpandedFindings(newExpanded)
     }
 
-    const copyCod = async (code: string, findingId: string) => {
+    const copyCode = async (code: string, findingId: string) => {
         await navigator.clipboard.writeText(code)
         setCopiedCode(findingId)
         setTimeout(() => setCopiedCode(null), 2000)
@@ -114,8 +114,8 @@ export default function ScanReport({ scanId }: ScanReportProps) {
                 <button
                     onClick={() => setSelectedSeverity('all')}
                     className={`p-4 rounded-lg border transition-all ${selectedSeverity === 'all'
-                            ? 'bg-purple-500/20 border-purple-500/50'
-                            : 'bg-white/5 border-white/10 hover:bg-white/10'
+                        ? 'bg-purple-500/20 border-purple-500/50'
+                        : 'bg-white/5 border-white/10 hover:bg-white/10'
                         }`}
                 >
                     <div className="text-2xl font-bold text-white">{summary.total}</div>
@@ -124,8 +124,8 @@ export default function ScanReport({ scanId }: ScanReportProps) {
                 <button
                     onClick={() => setSelectedSeverity('critical')}
                     className={`p-4 rounded-lg border transition-all ${selectedSeverity === 'critical'
-                            ? 'bg-red-500/20 border-red-500/50'
-                            : 'bg-red-500/10 border-red-500/30 hover:bg-red-500/20'
+                        ? 'bg-red-500/20 border-red-500/50'
+                        : 'bg-red-500/10 border-red-500/30 hover:bg-red-500/20'
                         }`}
                 >
                     <div className="text-2xl font-bold text-red-400">{summary.critical}</div>
@@ -134,8 +134,8 @@ export default function ScanReport({ scanId }: ScanReportProps) {
                 <button
                     onClick={() => setSelectedSeverity('high')}
                     className={`p-4 rounded-lg border transition-all ${selectedSeverity === 'high'
-                            ? 'bg-orange-500/20 border-orange-500/50'
-                            : 'bg-orange-500/10 border-orange-500/30 hover:bg-orange-500/20'
+                        ? 'bg-orange-500/20 border-orange-500/50'
+                        : 'bg-orange-500/10 border-orange-500/30 hover:bg-orange-500/20'
                         }`}
                 >
                     <div className="text-2xl font-bold text-orange-400">{summary.high}</div>
@@ -144,8 +144,8 @@ export default function ScanReport({ scanId }: ScanReportProps) {
                 <button
                     onClick={() => setSelectedSeverity('medium')}
                     className={`p-4 rounded-lg border transition-all ${selectedSeverity === 'medium'
-                            ? 'bg-yellow-500/20 border-yellow-500/50'
-                            : 'bg-yellow-500/10 border-yellow-500/30 hover:bg-yellow-500/20'
+                        ? 'bg-yellow-500/20 border-yellow-500/50'
+                        : 'bg-yellow-500/10 border-yellow-500/30 hover:bg-yellow-500/20'
                         }`}
                 >
                     <div className="text-2xl font-bold text-yellow-400">{summary.medium}</div>
@@ -154,8 +154,8 @@ export default function ScanReport({ scanId }: ScanReportProps) {
                 <button
                     onClick={() => setSelectedSeverity('low')}
                     className={`p-4 rounded-lg border transition-all ${selectedSeverity === 'low'
-                            ? 'bg-blue-500/20 border-blue-500/50'
-                            : 'bg-blue-500/10 border-blue-500/30 hover:bg-blue-500/20'
+                        ? 'bg-blue-500/20 border-blue-500/50'
+                        : 'bg-blue-500/10 border-blue-500/30 hover:bg-blue-500/20'
                         }`}
                 >
                     <div className="text-2xl font-bold text-blue-400">{summary.low}</div>

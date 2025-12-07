@@ -6,8 +6,8 @@ import Sidebar from '@/components/dashboard/Sidebar'
 import ReportsFiltersBar from '@/components/dashboard/reports/ReportsFiltersBar'
 import ReportsTable from '@/components/dashboard/reports/ReportsTable'
 import VulnerabilityDetailsDrawer from '@/components/dashboard/reports/VulnerabilityDetailsDrawer'
-import { useVulnerabilityReports, useVulnerabilityReport } from '@/lib/api/hooks'
-import type { VulnerabilityReport, VulnerabilityReportsFilters } from '@/lib/types/dashboard'
+import { useVulnerabilityReports, useVulnerabilityReport, VulnerabilityReportsFilters } from '@/lib/api/hooks'
+import type { VulnerabilityReport } from '@/lib/types/dashboard'
 
 export default function ReportsPage() {
   const [filters, setFilters] = useState<VulnerabilityReportsFilters>({

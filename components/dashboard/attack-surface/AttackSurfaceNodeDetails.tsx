@@ -41,9 +41,9 @@ export default function AttackSurfaceNodeDetails({
   }
 
   const totalVulnerabilities =
-    node.vulnerabilityCounts?.high +
-    node.vulnerabilityCounts?.medium +
-    node.vulnerabilityCounts?.low || 0
+    (node.vulnerabilityCounts?.high ?? 0) +
+    (node.vulnerabilityCounts?.medium ?? 0) +
+    (node.vulnerabilityCounts?.low ?? 0)
 
   return (
     <AnimatePresence>

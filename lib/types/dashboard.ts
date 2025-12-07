@@ -9,12 +9,12 @@ export interface SummaryMetric {
   delta?: number
   trend?: number[]
   type:
-    | 'total-scanned'
-    | 'high-severity'
-    | 'medium-severity'
-    | 'low-severity'
-    | 'new-deployments'
-    | 'ai-flagged'
+  | 'total-scanned'
+  | 'high-severity'
+  | 'medium-severity'
+  | 'low-severity'
+  | 'new-deployments'
+  | 'ai-flagged'
 }
 
 export interface SeverityDistributionItem {
@@ -126,6 +126,12 @@ export interface VulnerabilityReport {
   codeEndLine: number
   remediation: string[] // Array of remediation recommendations
   compilerVersion?: string
+}
+
+export interface VulnerabilityReportsFilters {
+  severity: VulnerabilitySeverity | 'all'
+  status: VulnerabilityStatus | 'all'
+  chain: 'Ethereum' | 'Solana' | 'Polygon' | 'Other' | 'all'
 }
 
 export type TriageStatus = 'new' | 'triaged' | 'dismissed'
