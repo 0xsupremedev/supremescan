@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔐 SupremeScan
+# <img src="https://img.icons8.com/fluency/48/lock.png" width="32" height="32" alt="lock"/> SupremeScan
 
 ### **AI-Powered Smart Contract Security Scanner**
 
@@ -26,31 +26,31 @@
 
 </div>
 
-## ✨ Features
+## <img src="https://img.icons8.com/fluency/24/star.png" width="20" height="20" alt="features"/> Features
 
-🔍 **Real-Time Vulnerability Detection**
+<img src="https://img.icons8.com/fluency/24/search.png" width="18" height="18" alt="search"/> **Real-Time Vulnerability Detection**
 - Scan Solidity contracts for critical, high, medium, and low severity issues
 - Pattern-based analysis with custom vulnerability rules
 - Line-by-line code inspection with precise location reporting
 
-🔗 **GitHub Integration**
+<img src="https://img.icons8.com/fluency/24/link.png" width="18" height="18" alt="link"/> **GitHub Integration**
 - Connect directly to your GitHub repositories
 - Automated scanning of all `.sol` files in your codebase
 - OAuth authentication for secure access
 
-📊 **Interactive Dashboard**
+<img src="https://img.icons8.com/fluency/24/combo-chart.png" width="18" height="18" alt="chart"/> **Interactive Dashboard**
 - Visual vulnerability trends with Chart.js
 - Attack surface graphs and metrics
 - Live triage feed for real-time updates
 - Comprehensive scan reports with remediation suggestions
 
-🛡️ **Security-First Architecture**
+<img src="https://img.icons8.com/fluency/24/shield.png" width="18" height="18" alt="shield"/> **Security-First Architecture**
 - JWT-based authentication system
 - Bcrypt password hashing
 - Zod validation schemas
 - Secure API routes with middleware protection
 
-## 🛠️ Tech Stack
+## <img src="https://img.icons8.com/fluency/24/settings.png" width="20" height="20" alt="tech"/> Tech Stack
 
 <table>
   <tr>
@@ -90,7 +90,7 @@
 | **Validation** | Zod |
 | **UI Components** | Headless UI, Lucide React |
 
-## 🚀 Quick Start
+## <img src="https://img.icons8.com/fluency/24/rocket.png" width="20" height="20" alt="rocket"/> Quick Start
 
 ### Prerequisites
 
@@ -137,35 +137,35 @@ Visit `http://localhost:3000` to access the application.
    GITHUB_CLIENT_SECRET=<your-github-oauth-client-secret>
    ```
 
-## 🔍 Vulnerability Detection
+## <img src="https://img.icons8.com/fluency/24/search.png" width="20" height="20" alt="search"/> Vulnerability Detection
 
 SupremeScan detects the following vulnerability patterns:
 
-### Critical Severity 🔴
+### <img src="https://img.icons8.com/fluency/20/high-priority.png" width="16" height="16" alt="critical"/> Critical Severity
 | ID | Name | Description |
 |----|------|-------------|
 | SS-CRIT-001 | Reentrancy | External call followed by state change without reentrancy guard |
 
-### High Severity 🟠
+### <img src="https://img.icons8.com/fluency/20/medium-priority.png" width="16" height="16" alt="high"/> High Severity
 | ID | Name | Description |
 |----|------|-------------|
 | SS-HIGH-001 | Unchecked External Call | External call return value not checked |
 | SS-HIGH-002 | Access Control Missing | Critical function missing access control modifiers |
 
-### Medium Severity 🟡
+### <img src="https://img.icons8.com/fluency/20/low-priority.png" width="16" height="16" alt="medium"/> Medium Severity
 | ID | Name | Description |
 |----|------|-------------|
 | SS-MED-001 | Timestamp Dependence | Using block.timestamp for critical logic |
 | SS-MED-002 | Integer Overflow Risk | Arithmetic without SafeMath (Solidity < 0.8.0) |
 | SS-MED-003 | Gas Limit DoS | Unbounded loop that could hit gas limit |
 
-### Low Severity 🟢
+### <img src="https://img.icons8.com/fluency/20/ok.png" width="16" height="16" alt="low"/> Low Severity
 | ID | Name | Description |
 |----|------|-------------|
 | SS-LOW-001 | Missing Event Emission | State-changing function without event emission |
 | SS-LOW-002 | Floating Pragma | Using floating pragma (^) instead of fixed version |
 
-## 📁 Project Structure
+## <img src="https://img.icons8.com/fluency/24/folder-invoices.png" width="20" height="20" alt="folder"/> Project Structure
 
 ```
 supremescan/
@@ -197,16 +197,16 @@ supremescan/
 └── rules/                  # Scanning rules
 ```
 
-## 🔐 Authentication
+## <img src="https://img.icons8.com/fluency/24/lock.png" width="20" height="20" alt="lock"/> Authentication
 
 SupremeScan implements a secure authentication system:
 
 ### Password Requirements
-- ✅ Minimum 8 characters
-- ✅ At least 1 uppercase letter
-- ✅ At least 1 lowercase letter
-- ✅ At least 1 number
-- ✅ At least 1 special character
+- <img src="https://img.icons8.com/fluency/16/checkmark.png" width="14" height="14"/> Minimum 8 characters
+- <img src="https://img.icons8.com/fluency/16/checkmark.png" width="14" height="14"/> At least 1 uppercase letter
+- <img src="https://img.icons8.com/fluency/16/checkmark.png" width="14" height="14"/> At least 1 lowercase letter
+- <img src="https://img.icons8.com/fluency/16/checkmark.png" width="14" height="14"/> At least 1 number
+- <img src="https://img.icons8.com/fluency/16/checkmark.png" width="14" height="14"/> At least 1 special character
 
 **Valid examples:** `SecurePass123!`, `MyP@ssw0rd`
 
@@ -215,7 +215,7 @@ SupremeScan implements a secure authentication system:
 2. **Login** → `/login`
 3. **Dashboard** → `/dashboard`
 
-## 📊 Dashboard Features
+## <img src="https://img.icons8.com/fluency/24/combo-chart.png" width="20" height="20" alt="dashboard"/> Dashboard Features
 
 - **GitHub Connect** - Link your GitHub account via OAuth
 - **Repository Selector** - Choose repos to scan
@@ -224,7 +224,7 @@ SupremeScan implements a secure authentication system:
 - **Attack Surface** - Visual representation of attack vectors
 - **Scan Reports** - Detailed findings with remediation tips
 
-## 📖 Documentation
+## <img src="https://img.icons8.com/fluency/24/book.png" width="20" height="20" alt="docs"/> Documentation
 
 | Document | Description |
 |----------|-------------|
@@ -234,7 +234,7 @@ SupremeScan implements a secure authentication system:
 | [SECURITY_FIXES.md](./SECURITY_FIXES.md) | Security improvements |
 | [GITHUB_SETUP.md](./GITHUB_SETUP.md) | GitHub OAuth setup |
 
-## 🏃 Available Scripts
+## <img src="https://img.icons8.com/fluency/24/console.png" width="20" height="20" alt="terminal"/> Available Scripts
 
 ```bash
 # Development
@@ -248,7 +248,7 @@ npm run start        # Start production server
 npm run lint         # Run ESLint
 ```
 
-## 🤝 Contributing
+## <img src="https://img.icons8.com/fluency/24/handshake.png" width="20" height="20" alt="contribute"/> Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -258,7 +258,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
+## <img src="https://img.icons8.com/fluency/24/document.png" width="20" height="20" alt="license"/> License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
@@ -266,8 +266,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**Built with ❤️ by [0xsupremedev](https://github.com/0xsupremedev)**
+**Built with <img src="https://img.icons8.com/fluency/20/like.png" width="16" height="16" alt="heart"/> by [0xsupremedev](https://github.com/0xsupremedev)**
 
-⭐ **Star this repo if you find it useful!** ⭐
+<img src="https://img.icons8.com/fluency/24/star.png" width="18" height="18" alt="star"/> **Star this repo if you find it useful!** <img src="https://img.icons8.com/fluency/24/star.png" width="18" height="18" alt="star"/>
 
 </div>
