@@ -3,6 +3,9 @@
 # <img src="https://img.icons8.com/fluency/48/lock.png" width="32" height="32" alt="lock"/> SupremeScan
 
 ### **AI-Powered Smart Contract Security Scanner**
+<img width="1920" height="1532" alt="screencapture-supremescan-vercel-app-2025-12-12-14_18_45" src="https://github.com/user-attachments/assets/af2a6f2f-acfb-4f3c-af56-381ab98acb4d" />
+
+
 
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.2-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
